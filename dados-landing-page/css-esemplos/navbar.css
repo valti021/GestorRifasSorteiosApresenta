@@ -1,13 +1,7 @@
-/* navbar-responsive.css */
-
 /* ESTILOS BASE DA NAVBAR */
 .navbar {
     display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
-    z-index: 9999;
     padding: 10px 20px;
     background: var(--cor-branco);
     box-shadow: 0 2px 10px var(--sombra-suave);

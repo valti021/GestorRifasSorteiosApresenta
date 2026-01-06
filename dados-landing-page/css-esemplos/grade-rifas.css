@@ -1,6 +1,7 @@
 .grade-rifas {
     max-width: 1200px;
-    margin: 20px auto;
+    margin: 0 auto;
+    display: grid;
 }
 #conteudo-rifas {
     background-color: var(--cor-branco);

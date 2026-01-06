@@ -16,7 +16,7 @@
     box-shadow: var(--shadow);
     border: 1px solid var(--border-color);
     overflow: hidden;
-    margin-bottom: 30px;
+    margin-bottom: 3px;
 }
 
 .example-header {

@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function carregarRifas() {
     try {
-        const response = await fetch('../data/local.json');
+        const response = await fetch('./dados-landing-page/data/local.json');
         const dados = await response.json();
 
         const template = document.querySelector('.rifa-card-example');

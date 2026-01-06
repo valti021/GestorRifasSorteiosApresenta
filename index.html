@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./dados-landing-page/css-landing/landing.css">
+    <link rel="stylesheet" href="dados-landing-page/css-esemplos/main.css">
 </head>
 <body>
     <!-- Header -->
@@ -172,40 +173,120 @@
                         </div>
                     </div>
 
+                    <nav class="navbar">
+                        <ul>
+                            <li><a href="#">Início</a></li>
+                            <li><a href="#">Resultado</a></li>
+                            <li><a href="#">Sortu</a></li>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-cog icone-engrenagem"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+
+                    <header>
+                        <div class="icone-conta">
+                            <a href="#" id="abrir-modal-conta">
+                                <i class="fa-solid fa-user"></i>
+                            </a>
+                        </div>
+                        <a href="#" class="logo">
+                            <img src="./dados-landing-page/img/logoGestorDeRifas.png" alt="logo gestor de rifas">
+                        </a>
+                    </header>
+                    
+
+                <nav class="status-vendedor">
+                    <ul>
+                        <li data-status="ativa">Rifas Ativas: <span id="rifas-ativas">2</span></li>
+                        <li data-status="adiada">Rifas Adiadas: <span id="rifas-adiadas">1</span></li>
+                        <li data-status="cancelada">Canceladas: <span id="rifas-canceladas">0</span></li>
+                        <li data-status="concluida">Concluídas: <span id="rifas-concluidas">5</span></li>
+                    </ul>
+                </nav>
+                       
                         
-                        <h4 style="color: #4CAF50; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center;">
-                            <span>Rifas Ativas</span>
-                            <button style="background: #4CAF50; color: white; border: none; border-radius: 50%; width: 40px; height: 40px; font-size: 1.2rem; cursor: pointer;">
-                                <i class="fas fa-plus"></i>
-                            </button>
-                        </h4>
-                        
-                        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px;">
-                            <div class="rifa-card-example">
-                                <h4>Viagem para Fernando de Noronha</h4>
-                                <p>Pacote completo para 2 pessoas com hospedagem de 5 dias.</p>
-                                <div class="details">
-                                    <span><i class="fas fa-tag"></i> R$ 10,00/dezena</span>
-                                    <span><i class="fas fa-ticket-alt"></i> 120/200</span>
+                <section class="grade-rifas">
+                    <div id="conteudo-rifas">
+
+                    <h2 id="titulo-aba">
+                        <span id="titulo-texto">Rifas Ativas</span>
+                        <button id="btn-criar-rifa-icone" class="btn-icone">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </h2>
+
+
+
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px;">
+
+                        <div class="rifa-card-example">
+                            <h4 class="title"></h4>
+
+                            <div class="img-premio">
+                                <i class="fa-solid fa-circle-chevron-left btn-left" ></i>
+
+                                <div class="img-container">
+                                    <!-- Imagem inserida pelo JS -->
                                 </div>
+
+                                <i class="fa-solid fa-circle-chevron-right btn-right"></i>
+                            </div>
+
+                            <div class="descricao">
+                                <p class="texto"></p>
+                            </div>
+
+                            <div class="grup-details">
                                 <div class="details">
-                                    <span><i class="far fa-calendar"></i> 25/12/2023</span>
-                                    <a href="#" style="color: #2196F3; font-weight: 600;">Gerenciar →</a>
+                                    <span>
+                                        <i class="fas fa-tag"></i>
+                                        R$ <span class="price"></span> /dezena
+                                    </span>
+
+                                    <span class="tickets-sold">
+                                        <i class="fas fa-ticket-alt"></i>
+                                    </span>
+                                </div>
+
+                                <div class="details">
+                                    <span class="draw-date">
+                                        <i class="far fa-calendar"></i>
+                                    </span>
                                 </div>
                             </div>
+
+                            <div class="link-gerenciar">
+                                <a class="gerenciar" href="#examples">Gerenciar →</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
                             
-                            <div class="rifa-card-example">
-                                <h4>Notebook Dell Inspiron</h4>
-                                <p>Notebook i7, 16GB RAM, 512GB SSD, placa de vídeo dedicada.</p>
-                                <div class="details">
-                                    <span><i class="fas fa-tag"></i> R$ 5,00/dezena</span>
-                                    <span><i class="fas fa-ticket-alt"></i> 75/100</span>
-                                </div>
-                                <div class="details">
-                                    <span><i class="far fa-calendar"></i> 10/01/2024</span>
-                                    <a href="#" style="color: #2196F3; font-weight: 600;">Gerenciar →</a>
-                                </div>
-                            </div>
+
+
+
+                        <div id="carregar-mais" style= "text-align:center; margin-top:10px;">
+                                <button id="btn-carregar-mais" style="
+                                    background: none;
+                                    border: none;
+                                    color: #4CAF50;
+                                    text-decoration: underline;
+                                    cursor: pointer;
+                                    padding: 0;
+                                    font: inherit;
+                                ">Carregar mais</button>
+                        </div>
+                    </section>
+
                         </div>
                     </div>
                 </div>
@@ -285,5 +366,6 @@
     </footer>
 
     <script src="dados-landing-page/js-landing/landing.js"></script>
+    <script src="./dados-landing-page/js-landing/rifas.js"></script>
 </body>
 </html>
