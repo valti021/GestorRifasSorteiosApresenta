@@ -1,0 +1,25 @@
+[
+    { "card-1": {
+        "title": "Notebook Samsung Galaxy Book + Tablet Galaxy Tab S6 Lite Rosa...",
+        "img":{
+            "img-1": "../img-card/card-1.png",
+            "img-2": "../img-card/card-2.png"
+            },
+        "description": "Chegou a hora de realizar o sonho de ter dispositivos premium da Samsung!",
+        "price": "10,00",
+        "tickets-sold": "120/200", 
+        "draw-date": "25/12/2023"
+    }},
+    {
+
+     "card-2": {
+        "title": "SORTEIO PREMIUM: iPhone 14 Pro Max Roxo-profundo!",
+        "img":{
+            "img-1": "../img-card/card-3.png"
+            },
+        "description": "Estamos sorteando o icônico iPhone 14 Pro Max na cor mais desejada",
+        "price": "5,00",
+        "tickets-sold": "300/500",
+        "draw-date": "31/12/2023"
+    }}
+]

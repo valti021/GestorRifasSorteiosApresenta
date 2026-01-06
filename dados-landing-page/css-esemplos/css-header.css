@@ -1,0 +1,64 @@
+header {
+    background: linear-gradient(135deg, var(--verde-escuro), var(--verde-principal), var(--verde-claro));
+
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: var(--cor-branco);
+    padding: 20px 20px;
+    text-align: center;
+    position: relative;
+    margin-top: 60px; /* Espaço para navbar fixa */
+    width: 100%;
+    box-sizing: border-box;
+
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+
+img[alt="logo gestor de rifas"] {
+    height: 80px;
+}
+
+/* Ajuste responsivo do ícone de conta */
+.icone-conta {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+/* Posicionamento em telas grandes */
+@media (min-width: 769px) {
+  .icone-conta {
+    right: 30px;
+    left: auto;
+  }
+}
+
+/* Posicionamento em telas médias e pequenas */
+@media (max-width: 768px) {
+  .icone-conta {
+    left: 20px;
+    right: auto;
+  }
+  
+  header {
+    padding: 15px 60px; /* Espaço para o ícone dos dois lados */
+  }
+}
+
+/* Para telas muito pequenas */
+@media (max-width: 480px) {
+  .icone-conta {
+    left: 15px;
+  }
+  
+  header {
+    padding: 15px 50px;
+  }
+}
+

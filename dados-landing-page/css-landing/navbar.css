@@ -1,0 +1,237 @@
+/* Navegação Desktop */
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    gap: 25px;
+}
+
+.nav-links li {
+    margin-left: 0;
+}
+
+.nav-links a {
+    font-weight: 500;
+    transition: var(--transition);
+    color: white;
+    text-decoration: none;
+    padding: 8px 0;
+    position: relative;
+    white-space: nowrap;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Efeito underline para links normais */
+.nav-links li:not(:last-child) a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent-color);
+    transition: width 0.3s ease;
+}
+
+.nav-links li:not(:last-child) a:hover::after {
+    width: 100%;
+}
+
+/* Botão especial (CTA) */
+.nav-links .btn-secondary {
+    padding: 10px 20px;
+    border-radius: 6px;
+    background: var(--secondary-color);
+    color: white;
+    transition: all 0.3s ease;
+    margin-left: 10px;
+}
+
+.nav-links .btn-secondary:hover {
+    background: var(--secondary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    color: white;
+}
+
+.nav-links .btn-secondary::after {
+    display: none;
+}
+
+/* Botão Menu Mobile */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    z-index: 1001;
+}
+
+.mobile-menu-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.1);
+}
+
+/* Menu Mobile (estado ativo) */
+.nav-links.active {
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    right: 0;    
+    width: 100%;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 80px 20px 40px;
+
+}
+
+.nav-links.active li {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.nav-links.active a {
+    font-size: 1.2rem;
+    padding: 15px;
+    width: 100%;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.nav-links.active a:not(.btn-secondary):hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-links.active .btn-secondary {
+    margin: 20px 0 0 0;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    width: 80%;
+    max-width: 300px;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+
+/* Tablet (768px - 992px) */
+@media (max-width: 992px) {
+    .nav-links {
+        gap: 20px;
+    }
+    
+    .nav-links a {
+        font-size: 0.95rem;
+    }
+    
+    .nav-links .btn-secondary {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Mobile (até 768px) */
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    /* Estilos específicos para quando o menu está fechado (mobile) */
+    .nav-links:not(.active) {
+        display: none;
+    }
+}
+
+/* Mobile Pequeno (até 576px) */
+@media (max-width: 576px) {
+    .nav-links.active {
+        gap: 20px;
+        padding: 70px 15px 30px;
+    }
+    
+    .nav-links.active a {
+        font-size: 1.1rem;
+        padding: 12px;
+    }
+    
+    .nav-links.active .btn-secondary {
+        padding: 14px 25px;
+        font-size: 1rem;
+        width: 90%;
+    }
+    
+    .mobile-menu-btn {
+        font-size: 1.6rem;
+        padding: 6px;
+    }
+}
+
+/* Mobile Muito Pequeno (até 400px) */
+@media (max-width: 400px) {
+    .nav-links.active {
+        gap: 15px;
+    }
+    
+    .nav-links.active a {
+        font-size: 1rem;
+        padding: 10px;
+    }
+    
+    .nav-links.active .btn-secondary {
+        padding: 12px 20px;
+        font-size: 0.95rem;
+    }
+}
+
+/* Orientação Paisagem (mobile) */
+@media (max-height: 600px) and (max-width: 768px) {
+    .nav-links.active {
+        padding-top: 60px;
+        gap: 15px;
+        justify-content: flex-start;
+    }
+    
+    .nav-links.active a {
+        padding: 10px;
+    }
+    
+    .nav-links.active .btn-secondary {
+        margin-top: 10px;
+        padding: 10px 20px;
+    }
+}
+
+/* Acessibilidade: prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+    .nav-links a,
+    .nav-links .btn-secondary,
+    .mobile-menu-btn {
+        transition: none;
+    }
+    
+    .nav-links .btn-secondary:hover {
+        transform: none;
+    }
+}
+
+/* Dark Mode do sistema */
+@media (prefers-color-scheme: dark) {
+    .nav-links.active {
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    }
+}

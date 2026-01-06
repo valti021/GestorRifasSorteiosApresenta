@@ -1,0 +1,61 @@
+/* Exemplos Section */
+.examples {
+    background-color: white;
+}
+
+.examples-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.example-preview {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.example-header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: -20px -20px 20px -20px;
+}
+
+.example-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.example-btn {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.example-btn.red {
+    background-color: #ff5f57;
+}
+
+.example-btn.yellow {
+    background-color: #ffbd2e;
+}
+
+.example-btn.green {
+    background-color: #28ca42;
+}
+
+.example-content {
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
+}

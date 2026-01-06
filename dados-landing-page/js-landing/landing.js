@@ -9,12 +9,30 @@
                 : '<i class="fas fa-bars"></i>';
         });
         
-        // Fechar menu ao clicar em um link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
+        // Adicione isso ao seu JS existente:
+
+        // Fechar menu ao redimensionar para desktop
+        window.addEventListener('resize', function() {
+            const navLinks = document.getElementById('navLinks');
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            
+            if (window.innerWidth > 768) {
                 navLinks.classList.remove('active');
                 mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-            });
+            }
+        });
+
+        // Fechar menu ao clicar fora (opcional)
+        document.addEventListener('click', function(event) {
+            const navLinks = document.getElementById('navLinks');
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const isClickInsideMenu = navLinks.contains(event.target);
+            const isClickOnButton = mobileMenuBtn.contains(event.target);
+            
+            if (!isClickInsideMenu && !isClickOnButton && window.innerWidth <= 768) {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            }
         });
         
         // Smooth scroll para links internos
@@ -36,6 +54,7 @@
                 }
             });
         });
+        
         
         // Efeito de digitação no hero
         const heroTitle = document.querySelector('.hero-text h1');
